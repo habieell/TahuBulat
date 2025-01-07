@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: url(/assets/bk.jpg);
+}
+
+.logo {
+  position: absolute;
+  left: 5%;
+}
+
+.logo img {
+  border-radius: 50%;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.MenuBar {
+  width: 100%;
+  background-image: url(/assets/BackgroundRetro.jpg);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-left: 20px;
+  /* margin: 0px 275px 2px 275px; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+}
+
+.container {
+  font-size: 14px;
+  /* height: 70vh; */
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  margin: 2rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 350px 1fr auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.card-image {
+  position: relative;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/assets/bk1.jpg);
+  background-size: cover;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: max-width 0.4s, max-height 0.4s;
+}
+
+.card:hover .card-image img {
+  max-width: 120%;
+  max-height: 120%;
+}
+
+.card {
+  box-shadow: 0 15px 30px -10px #000;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(2) .card-image {
+  background: url(/assets/bk2.jpg);
+}
+
+.card-body {
+  background: #fff;
+  padding: 20px 28px;
+}
+
+.card-body .power {
+  font-weight: bolder;
+}
+
+.card-body h2 {
+  font-size: 1.8em;
+  margin: 4px auto 12px;
+}
+
+.card-body p {
+  color: gray;
+  font-size: 1.1em;
+  line-height: 20px;
+  text-align: center;
+}
+
+.card-footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.card-footer .info {
+  font-size: 0.9em;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-footer .info:last-child {
+  border: none;
+}
+
+.card-footer .info .type {
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-size: 0.8em;
+}
+
+.card:nth-child(1) .card-footer {
+  background: #4891ba;
+}
+.card:nth-child(2) .card-footer {
+  background: #f6b10f;
+}
+
+.card:nth-child(1) .power {
+  color: #4891ba;
+}
+.card:nth-child(2) .power {
+  color: #f6b10f;
+}
+
+.selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover .selector {
+  opacity: 1;
+}
+
+.selector button {
+  background-color: #4891ba;
+  color: #fff;
+  outline: none;
+  border: 2px solid currentColor;
+  cursor: pointer;
+  padding: 12px 20px;
+  transform: translateY(60px);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-weight: bolder;
+  transition: opacity 0.3s;
+}
+
+.selector button:hover {
+  opacity: 0.8;
+}
+
+.card:nth-child(2) .selector button {
+  background-color: #f6b10f;
+}
+
+.btn {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ref {
+  margin-left: 150px;
+  color: aliceblue;
+}
+.ref ul li {
+  margin-left: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 5.5em;
+    height: 25px;
+    font-size: 1rem;
+  }
+  .ref {
+    margin-left: 50px;
+  }
+  .ref ul li {
+    font-size: 12px;
+  }
+  .ref h1 {
+    font-size: 22px;
+  }
+}
